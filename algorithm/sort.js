@@ -1,4 +1,12 @@
-const arr = [1, 20, 10, 30, 22, 11, 55, 24, 31, 88, 12, 100, 50,1, 20, 10, 30, 22, 11, 55, 24, 31, 88, 12, 100, 50];
+const myArr1 = [1, 20, 10, 30, 22, 11, 55, 24, 31, 88, 12, 100, 50,1, 20, 10, 30, 22, 11, 55, 24, 31, 88, 12, 100, 50];
+const myArr2 = [1, 20, 10, 30, 22, 11, 55, 24, 31, 88, 12, 100, 50,1, 20, 10, 30, 22, 11, 55, 24, 31, 88, 12, 100, 50];
+const myArr3 = [1, 20, 10, 30, 22, 11, 55, 24, 31, 88, 12, 100, 50,1, 20, 10, 30, 22, 11, 55, 24, 31, 88, 12, 100, 50];
+const myArr4 = [1, 20, 10, 30, 22, 11, 55, 24, 31, 88, 12, 100, 50,1, 20, 10, 30, 22, 11, 55, 24, 31, 88, 12, 100, 50];
+const myArr5 = [1, 20, 10, 30, 22, 11, 55, 24, 31, 88, 12, 100, 50,1, 20, 10, 30, 22, 11, 55, 24, 31, 88, 12, 100, 50];
+const myArr6 = [1, 20, 10, 30, 22, 11, 55, 24, 31, 88, 12, 100, 50,1, 20, 10, 30, 22, 11, 55, 24, 31, 88, 12, 100, 50];
+const myArr7 = [1, 20, 10, 30, 22, 11, 55, 24, 31, 88, 12, 100, 50,1, 20, 10, 30, 22, 11, 55, 24, 31, 88, 12, 100, 50];
+const myArr8 = [1, 20, 10, 30, 22, 11, 55, 24, 31, 88, 12, 100, 50,1, 20, 10, 30, 22, 11, 55, 24, 31, 88, 12, 100, 50];
+
 
 /**
  * 交换数组中指定2个位置的值
@@ -11,7 +19,11 @@ function swap(arr,i,j){
     arr[i] = arr[j];
     arr[j] = temp;
 }
-
+function sort(arr){
+    console.time("sort方法排序速度: ")
+    arr.sort((item1, item2) => item1 - item2);
+    console.timeEnd("sort方法排序速度: ");
+}
 function bubble(arr){
     console.time("冒泡排序速度: ")
     const len = arr.length;
@@ -44,8 +56,9 @@ function improveBubble(arr){
     return arr;
 }
 
-function improveBubble2(arr, len){
+function improveBubble2(arr){
     console.time("记录位置后冒泡排序速度: ")
+    let len = arr.length;
     for(let i = len - 1; i >= 0; i--){
       let pos = 0;
       for(let j = 0; j < i; j++){
@@ -77,7 +90,7 @@ function selectionSort(arr){
 
 function insertSort(arr){
     console.time("插入排序速度: ")
-    for(let i = 0; i < arr.length; i++){
+    for(let i = 0,len = arr.length; i < len; i++){
       let temp = arr[i];
       for(let j = 0; j < i; j++){
         if(temp < arr[j] && j === 0){
@@ -96,14 +109,14 @@ function insertSort(arr){
 }
 
 function quickSort(arr){
-    console.time("快速排序速度: ")
-    if(arr.length <= 1){
+    let len = arr.length;
+    if(len <= 1){
       return arr;
     }
     let temp = arr[0];
     const left = [];
     const right = [];
-    for(var i = 1; i < arr.length; i++){
+    for(let i = 1; i < len; i++){
       if(arr[i] > temp){
         right.push(arr[i]);
       }else{
@@ -139,21 +152,24 @@ function mergeSort(arr){
     return arr;
 }
 
-bubble(arr);
-improveBubble(arr);
-improveBubble2(arr);
-selectionSort(arr);
-insertSort(arr);
-quickSort(arr);
+sort(myArr1);
+bubble(myArr2);
+improveBubble(myArr3);
+improveBubble2(myArr4);
+selectionSort(myArr5);
+insertSort(myArr6);
+console.time("快速排序速度: ")
+quickSort(myArr7);
 console.timeEnd("快速排序速度: ");
-mergeSort(arr);
+mergeSort(myArr8);
 
 /**
- * 冒泡排序速度: : 0.301ms
- * 加flag后冒泡排序速度: : 0.027ms
- * 记录位置后冒泡排序速度: : 0.067ms
- * 选择排序速度: : 0.045ms
- * 插入排序速度: : 0.030ms
- * 快速排序速度: : 0.017ms
- * 归并排序速度: : 0.052ms
+ * sort方法排序速度: : 0.749ms
+ * 冒泡排序速度: : 0.246ms
+ * 加flag后冒泡排序速度: : 0.063ms
+ * 记录位置后冒泡排序速度: : 0.065ms
+ * 选择排序速度: : 0.064ms
+ * 插入排序速度: : 0.131ms
+ * 快速排序速度: : 0.232ms
+ * 归并排序速度: : 0.056ms
  */
