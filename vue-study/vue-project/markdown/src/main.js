@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 
 Vue.config.productionTip = false
+require('./assets/darkness.css')
 
 /* eslint-disable no-new */
 new Vue({
