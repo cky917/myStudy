@@ -22,7 +22,8 @@ var webpackConfig = merge(baseWebpackConfig, {
   output: {
     path: config.build.assetsRoot,
     filename: utils.assetsPath('js/[name].[chunkhash].js'),
-    chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
+    chunkFilename: utils.assetsPath('js/[id].[chunkhash].js'),
+    publicPath: 'https://cky917.github.io/myStudy/vue-study/vue-project/markdown/dist/' //编译的文件域名
   },
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
