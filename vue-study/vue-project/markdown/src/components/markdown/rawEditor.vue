@@ -10,7 +10,7 @@
 
 <script>
     //设计思想就是rawHtml内容已改变，就会触发renderHtml方法
-    import {renderHtml} from '../vuex/actions' 
+    import {renderHtml} from '../../vuex/actions' 
     export default {
         data(){
             return{

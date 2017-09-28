@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import index from '../views/index'
-import notFound from '../views/404'
+import Index from '../views/index'
+import Markdown from '../views/markdown'
+import NotFound from '../views/404'
+import myTable from '../views/table'
 
 Vue.use(Router)
 
@@ -10,12 +12,22 @@ export default new Router({
     {
       path: '/',
       name: 'index',
-      component: index
+      component: Index
+    },
+    {
+      path: '/markdown',
+      name: 'markdown',
+      component:Markdown
+    },
+    {
+      path: '/mytable',
+      name: 'myTable',
+      component:myTable
     },
     {
       path: '*',
       name: '404',
-      component: notFound
+      component: NotFound
     },
   ]
 })
