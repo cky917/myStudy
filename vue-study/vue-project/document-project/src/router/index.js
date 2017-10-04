@@ -4,6 +4,7 @@ import Index from '../views/index'
 import Markdown from '../views/markdown'
 import NotFound from '../views/404'
 import myTable from '../views/table'
+import githubCommit from '../views/github-commit'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
       path: '/mytable',
       name: 'myTable',
       component:myTable
+    },
+    {
+      path: '/githubCommit',
+      name: 'githubCommit',
+      component:githubCommit
     },
     {
       path: '*',
