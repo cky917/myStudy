@@ -1,0 +1,173 @@
+.dice-container{
+    display: flex;
+    justify-content: space-around;
+}
+.dice{
+    display: flex;
+    background: #e7e7e7;
+    width: 93px;
+    height: 93px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.dot{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #333;
+    border-radius: 50%;
+}
+.dice1{
+    /* 属性决定主轴的方向（即项目的排列方向）row | row-reverse | column | column-reverse; */
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+.dice2{
+    flex-direction: column;
+    /* justify-content属性定义了项目在主轴上的对齐方式。 flex-start | flex-end | center | space-between | space-around;*/
+    justify-content: space-between;
+    /* align-items属性定义项目在交叉轴上如何对齐 flex-start | flex-end | center | baseline | stretch; */
+    align-items: center;
+}
+.dice3{
+    flex-direction: column;
+    justify-content: space-between;
+}
+.dice3 .dot:nth-child(2){
+    /* align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。 */
+    align-self:center;
+}
+.dice3 .dot:nth-child(3){
+    align-self:flex-end;
+}
+
+.dice4{
+    /* flex-wrap属性定义，如果一条轴线排不下，如何换行 nowrap | wrap | wrap-reverse;*/
+    flex-wrap:wrap;
+    /* align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。 */
+    align-content: space-between;
+}
+.dice4 .column{
+    /* flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。  <length> | auto;*/
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dice5{
+    flex-wrap:wrap;
+    align-content: space-between;
+}
+.dice5 .row{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.dice5 .row:nth-child(2){
+    justify-content: center;
+}
+
+.dice6{
+    /* flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。 */
+    flex-flow: column wrap; 
+    justify-content: space-between;
+}
+.dice6 .row{
+    display: flex;
+    justify-content: space-around;
+}
+
+.dice7{
+    flex-direction: column;
+    justify-content: space-between;
+}
+.dice7 .row{
+    display: flex;
+}
+.dice7 .row:nth-child(2){
+    align-self: center;
+}
+.dice7 .row:nth-child(3){
+    align-self: flex-end;
+}
+.dice7 .row:nth-child(4),.dice7 .row:nth-child(5){
+    justify-content: space-around;
+}
+.dice8{
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+.dice8 .row{
+    display: flex;
+    justify-content: space-around;
+}
+.dice9{
+    flex-flow: column wrap;
+    justify-content: space-between
+}
+.dice9 .row{
+    display: flex;
+    justify-content: space-around;
+}
+
+.Grid {
+  display: flex;
+}
+
+.Grid-cell {
+  background: #eee;
+  /* flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。 */
+  /* flex-grow flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。 */
+  /* flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。 */
+  /* flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。 */
+  flex: 1;
+  margin: 10px;
+}
+
+.HolyGrail{
+    display: flex;
+    flex-direction: column;
+}
+.HolyGrail-header,
+.HolyGrail-footer{
+    background: #f00;
+    height: 50px;
+    flex: 1;
+}
+.HolyGrail-content{
+    background: #eee;
+    height: 300px;
+}
+.HolyGrail-nav{
+    background: #333;
+}
+.HolyGrail-ads{
+    background: yellow;
+}
+.HolyGrail-body{
+    display: flex;
+    flex: 1;
+}
+.HolyGrail-content{
+    flex: 2;
+}
+.HolyGrail-nav,
+.HolyGrail-ads{
+    flex: 0 0 12em;
+}
+.HolyGrail-nav{
+    order:-1;
+}
+@media (max-width: 768px) {
+  .HolyGrail-body {
+    flex-direction: column;
+    flex: 1;
+  }
+  .HolyGrail-nav,
+  .HolyGrail-ads,
+  .HolyGrail-content {
+    flex: auto;
+  }
+}

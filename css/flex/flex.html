@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex 各种布局的实现</title>
+    <link href="./flex.css" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <h1>实现骰子（好像是麻将- -）</h1>
+        <article class="dice-container">
+            <div class="dice dice1">
+                <span class="dot"></span>
+            </div>
+            <div class="dice dice2">
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="dice dice3">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="dice dice4">
+                <div class="column">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <div class="column">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="dice dice5">
+                <div class="row">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <div class="row">
+                    <span class="dot"></span>
+                </div>
+                <div class="row">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="dice dice6">
+                <div class="row">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <div class="row">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <div class="row">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="dice dice7">
+                <div class="row">
+                    <span class="dot"></span>
+                </div>
+                <div class="row">
+                    <span class="dot"></span>
+                </div>
+                <div class="row">
+                    <span class="dot"></span>
+                </div>
+                <div class="row">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <div class="row">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="dice dice8">
+                <div class="row">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <div class="row">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <div class="row">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <div class="row">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="dice dice9">
+                <div class="row">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <div class="row">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <div class="row">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section>
+        <h1>实现网格布局</h1>
+        <article class="container">
+            <div class="Grid">
+                <div class="Grid-cell">...</div>
+                <div class="Grid-cell">...</div>
+                <div class="Grid-cell">...</div>
+            </div>
+            <div class="Grid">
+                <div class="Grid-cell">...</div>
+                <div class="Grid-cell">...</div>
+                <div class="Grid-cell">...</div>
+            </div>
+            <div class="Grid">
+                <div class="Grid-cell">...</div>
+                <div class="Grid-cell">...</div>
+                <div class="Grid-cell">...</div>
+            </div>
+        </article>
+    </section>
+    <section>
+        <h1>圣杯布局</h1>
+        <article>
+            <div class="HolyGrail">
+                <div class="HolyGrail-header">HolyGrail-header</div>
+                <div class="HolyGrail-body">
+                    <main class="HolyGrail-content">HolyGrail-content</main>
+                    <nav class="HolyGrail-nav">nav</nav>
+                    <aside class="HolyGrail-ads">ads</aside>
+                </div>
+                <div class="HolyGrail-footer">footer</div>
+            </body>
+        </article>
+    </section>
+</body>
+</html>
